@@ -1,0 +1,40 @@
+{
+    "name": "casdorio/gateway",
+    "description": "A CodeIgniter 4 module for processing payments via multiple gateways (AuthorizeNet, Stripe, PayPal)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Adriano S Oliveira",
+            "email": "casdorio@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "authorizenet/authorizenet": "^2.0"
+    },
+    "require-dev": {
+        "codeigniter4/framework": "^4.4",
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Casdorio\\GatewayPayment\\": "src/",
+            "CodeIgniter\\": "vendor/codeigniter4/framework/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Casdorio\\GatewayPayment\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "phpunit",
+        "post-install-cmd": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}
