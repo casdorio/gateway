@@ -3,6 +3,7 @@
     "description": "A CodeIgniter 4 module for processing payments via multiple gateways (AuthorizeNet, Stripe, PayPal)",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Carlos Adriano S Oliveira",
